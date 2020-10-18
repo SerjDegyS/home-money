@@ -16,8 +16,8 @@ import {
   switchAll, switchMap, takeLast,
   toArray
 } from 'rxjs/operators';
-import {error} from 'util';
-import {subscribeTo, subscribeToObservable, subscribeToResult} from 'rxjs/internal-compatibility';
+// import {error} from 'util';
+// import {subscribeTo, subscribeToObservable, subscribeToResult} from 'rxjs/internal-compatibility';
 import {Category} from '../models/category.model';
 
 @Injectable()

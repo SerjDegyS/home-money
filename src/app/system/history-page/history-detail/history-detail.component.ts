@@ -6,7 +6,7 @@ import {CategoriesService} from '../../shared/services/categories.service';
 import {concatMap, mergeMap} from 'rxjs/operators';
 import {DegysEvent} from '../../shared/models/event.model';
 import {Category} from '../../shared/models/category.model';
-import {id} from '@swimlane/ngx-charts';
+// import {id} from '@swimlane/ngx-charts';
 
 @Component({
   selector: 'degys-history-detail',

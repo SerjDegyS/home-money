@@ -8,6 +8,7 @@ import {Message} from '../../shared/models/message.model';
 import {AuthService} from '../../shared/services/auth.service';
 import {fadeStateTrigger} from '../../shared/animations/fade.animation';
 import {Meta, Title} from '@angular/platform-browser';
+import {UsersFirebaseService} from '../../shared/services/users.firebase.service';
 
 @Component({
   selector: 'degys-login',
@@ -26,7 +27,8 @@ export class LoginComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private title: Title,
-    private meta: Meta
+    private meta: Meta,
+    private usersFirebaseService: UsersFirebaseService
   ) {
     title.setTitle('Вход в систему');
   }

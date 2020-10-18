@@ -1,7 +1,11 @@
 import {Component, EventEmitter, HostBinding, Input, OnDestroy, OnInit, Output} from '@angular/core';
 import {Message} from '../../../../shared/models/message.model';
 import {DegysEvent} from '../../../shared/models/event.model';
+<<<<<<< HEAD
 import {isBoolean} from 'util';
+=======
+// import {isBoolean} from 'util';
+>>>>>>> d309e62 (create new branch master-firebase)
 import {ChooseEvent} from '../../../shared/models/choose-event.model';
 import {Observable, Subscription} from 'rxjs';
 import {map} from 'rxjs/operators';

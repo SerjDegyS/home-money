@@ -43,7 +43,7 @@ export class BillPageComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.sub1.add(this.route.queryParams
       .subscribe(params => {
-       if (params['createdBill']) {
+       if (params.createdBill) {
          this.message.showMessage('success', 'Теперь у Вас есть счет!', 5000);
          // this.showBill();
        }

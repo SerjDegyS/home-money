@@ -7,7 +7,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  private user = window.localStorage.getItem('user');
+   user = window.localStorage.getItem('user');
 
   constructor(private router: Router) { }
 

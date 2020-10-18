@@ -23,6 +23,6 @@ export class UsersService extends BaseApi{
   }
 
   updateUser(user: User): Observable<User> {
-    return this.put(`users/${user.id}`, user);
+    return this.put(`users/${user.uid}`, user);
   }
 }

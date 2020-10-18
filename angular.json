@@ -22,7 +22,11 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
+<<<<<<< HEAD
             "aot": false,
+=======
+            "aot": true,
+>>>>>>> d309e62 (create new branch master-firebase)
             "assets": [
               "src/favicon.ico",
               "src/assets"
@@ -127,5 +131,12 @@
         }
       }
     }},
+<<<<<<< HEAD
   "defaultProject": "home-money"
+=======
+  "defaultProject": "home-money",
+  "cli": {
+    "analytics": "01e18dae-aee0-4758-834f-c1b515ed87a5"
+  }
+>>>>>>> d309e62 (create new branch master-firebase)
 }

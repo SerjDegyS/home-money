@@ -19,7 +19,11 @@ import {fadeStateTrigger} from '../../../shared/animations/fade.animation';
 export class CreateBillComponent implements OnInit, OnDestroy {
 
   user: User = JSON.parse(window.localStorage.getItem('user'));
+<<<<<<< HEAD
   private allCurrency: string[];
+=======
+  allCurrency: string[];
+>>>>>>> d309e62 (create new branch master-firebase)
   currency: string;
   sub1 = new Subscription();
   message = new Message();

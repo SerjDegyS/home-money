@@ -10,7 +10,7 @@ import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'degys-system',
-  templateUrl: './system.component.htm',
+  templateUrl: './system.component.html',
   animations: [fadeStateTrigger]
 })
 export class SystemComponent implements OnInit, OnDestroy {

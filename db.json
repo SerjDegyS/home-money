@@ -19,6 +19,16 @@
       "password": "12345678",
       "name": "kujk",
       "id": 3
+<<<<<<< HEAD
+=======
+    },
+    {
+      "email": "degyse@gmail.com",
+      "password": "123456",
+      "name": "Серж",
+      "id": 4,
+      "bill": 7
+>>>>>>> d309e62 (create new branch master-firebase)
     }
   ],
   "bills": [
@@ -39,6 +49,33 @@
       "currency": "UAH",
       "userId": 1,
       "id": 3
+<<<<<<< HEAD
+=======
+    },
+    {
+      "value": 10000,
+      "currency": "RUB",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "value": 50000,
+      "currency": "UAH",
+      "userId": 4,
+      "id": 5
+    },
+    {
+      "value": -1799,
+      "currency": "UAH",
+      "userId": 4,
+      "id": 6
+    },
+    {
+      "value": -499,
+      "currency": "UAH",
+      "userId": 4,
+      "id": 7
+>>>>>>> d309e62 (create new branch master-firebase)
     }
   ],
   "categories": [
@@ -101,6 +138,21 @@
       "capacity": 1000,
       "billId": 1,
       "id": 11
+<<<<<<< HEAD
+=======
+    },
+    {
+      "name": "Рібалка",
+      "capacity": 1000,
+      "billId": 6,
+      "id": 12
+    },
+    {
+      "name": "рібалка",
+      "capacity": 1000,
+      "billId": 7,
+      "id": 13
+>>>>>>> d309e62 (create new branch master-firebase)
     }
   ],
   "events": [
@@ -223,6 +275,68 @@
       "date": "20.03.2020 00:04:47",
       "description": "на гиалуроноваю кислоту",
       "id": 15
+<<<<<<< HEAD
     }
   ]
 }
+=======
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "categoryId": 1,
+      "date": "08.02.2023 01:24:43",
+      "description": "Спининг",
+      "id": 16
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "categoryId": 12,
+      "date": "08.02.2023 01:25:11",
+      "description": "Спининг",
+      "id": 17
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "categoryId": 12,
+      "date": "08.02.2023 01:26:04",
+      "description": "котушка",
+      "id": 18
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "categoryId": 12,
+      "date": "08.02.2023 01:29:34",
+      "description": "шнур",
+      "id": 19
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "categoryId": 1,
+      "date": "08.02.2023 01:31:20",
+      "description": "воблер",
+      "id": 20
+    },
+    {
+      "type": "outcome",
+      "amount": 300,
+      "categoryId": 12,
+      "date": "08.02.2023 01:31:52",
+      "description": "воблер",
+      "id": 21
+    },
+    {
+      "type": "outcome",
+      "amount": 500,
+      "categoryId": 13,
+      "date": "08.02.2023 01:42:16",
+      "description": "Спининг",
+      "id": 22
+    }
+  ]
+}
+>>>>>>> d309e62 (create new branch master-firebase)
