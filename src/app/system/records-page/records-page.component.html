@@ -1,0 +1,38 @@
+<div @fade>
+  <div class="title-block">
+    <h3 class="title">
+      Страница записей <span class="sparkline bar"></span>
+    </h3>
+  </div>
+
+  <div
+    @fade
+    class="alert alert-{{message.type}}"
+    *ngIf="message.text"
+  >{{message.text}}</div>
+
+  <section class="section text-center" *ngIf="!isLoaded">
+    <degys-loader></degys-loader>
+  </section>
+
+  <section
+    class="section"
+    [ngStyle]="{'pointer-events' : billId === 1 ? 'none' : 'auto'}"
+    *ngIf="isLoaded">
+    <div class="row">
+      <div class="col-md-6">
+        <degys-add-event [categories]="categories"></degys-add-event>
+      </div>
+      <div class="col-md-6">
+        <degys-add-category (onCategoryAdd)="newCategoryAdded($event)" ></degys-add-category>
+      </div>
+      <div class="col-md-6">
+        <degys-edit-category
+          [categories]="categories"
+          (onCategoryEdit)="categoryWasEdited($event)"
+          (onCategoryDelete)="categoryWasDeleted($event)"
+        ></degys-edit-category>
+      </div>
+    </div>
+  </section>
+</div>

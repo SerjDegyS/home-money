@@ -1,0 +1,32 @@
+.home-page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .brand{
+    margin: 20px;
+    padding: 20px;
+    transform: scale(3);
+  }
+
+  .text-welcome{
+    padding: 40px;
+
+    .text-h2{
+      text-align: center;
+      margin: 30px;
+    }
+
+    p{
+      text-indent: 25px;
+    }
+
+    li{
+      padding: 10px;
+    }
+
+    .text-for_visitor{
+      margin-top: 20px;
+    }
+  }
+}

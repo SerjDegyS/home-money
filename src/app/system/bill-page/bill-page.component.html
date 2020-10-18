@@ -1,0 +1,36 @@
+<!--CONTENT-->
+<div @fade>
+  <div class="title-block">
+    <h3 class="title pull-left">
+      Страница счета <span class="sparkline bar"></span>
+    </h3>
+
+    <div class="pull-right">
+      <button class="btn-sm btn btn-primary-outline" (click)="onRefresh()">
+        <i class="fa fa-refresh"></i>
+      </button>
+    </div>
+  </div>
+
+  <div
+    @fade
+    class="alert alert-{{message.type}}"
+    *ngIf="message.text"
+  >
+    {{message.text}}
+  </div>
+
+  <section class="section">
+    <div class="row text-center" *ngIf="!isLoaded">
+      <degys-loader></degys-loader>
+    </div>
+
+    <div class="row" *ngIf="isLoaded">
+
+      <degys-bill-card [bill]="bill" [currency]="currency"></degys-bill-card>
+      <degys-currency-card [bill]="bill" [currency]="currency"></degys-currency-card>
+
+    </div>
+  </section>
+</div>
+<!--CONTENT-->

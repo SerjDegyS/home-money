@@ -1,0 +1,52 @@
+
+<div class="" style="overflow: auto">
+  <table class="table table-striped">
+    <thead>
+    <th scope="col"><input type="checkbox" [(ngModel)]="selectAll" (change)="checkAll()"></th>
+    <th scope="col">#</th>
+    <th scope="col">тип</th>
+    <th scope="col">сумма</th>
+    <th scope="col">описание</th>
+    <th scope="col">дата</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let e of eventsOption; let idx = index">
+      <th>
+        <input
+          type="checkbox"
+          [(ngModel)]="e.checked"
+          (change)="onToggle()"
+        >
+      </th>
+      <th scope="row">{{idx + 1}}</th>
+      <td scope="row" [style.color]="(e.event.type === 'outcome') ? 'red' : 'green'">
+<!--        {{e.event.type}}-->
+        <span *ngIf="e.event.type === 'income'">доход</span>
+        <span *ngIf="e.event.type === 'outcome'">расход</span>
+      </td>
+      <td scope="row">{{e.event.amount}}</td>
+      <td style="word-wrap: break-word; width: 50px;" scope="row">{{e.event.description}}</td>
+      <td scope="row">{{e.event.date | degysMoment: 'DD.MM.YYYY HH:mm:ss' : 'HH:mm  DD/MM/YY'}}</td>
+      <th>
+        <button
+          type="button"
+          class="close"
+          aria-label="Close"
+          style="color: red"
+          (click)="removeEvent(idx)">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div
+  class="bill"
+  style="float: right"
+
+  [style.color]="(totalAmount > 0) ? 'green' : 'red'"
+>
+  <label>Вместе: {{totalAmount}}</label>
+</div>
+

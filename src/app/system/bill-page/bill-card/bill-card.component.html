@@ -1,0 +1,57 @@
+<div class="col col-xs-12 col-sm-12 col-md-6 col-xl-5 stats-col">
+
+  <div
+    @fade
+    class="alert alert-{{message.type}}"
+    *ngIf="message.text"
+  >
+    {{message.text}}
+  </div>
+
+  <div class="card stats" style="height: 291px;">
+    <div class="card-block">
+      <div class="title-block">
+        <h4 class="title">Счет</h4>
+      </div>
+      <div class="row row-sm stats-container">
+        <div class="col-xs-12 stat-col">
+          <div class="stat-icon">
+            <span *ngIf="bill.currency === 'UAH'">&#8372;</span>
+            <i *ngIf="bill.currency === 'USD' || bill.currency === 'EUR' || bill.currency === 'RUB' else anotherCur"
+              class="fa fa-{{ bill.currency.toLowerCase() }}"
+            >
+              </i>
+
+            <ng-template #anotherCur>
+              <i *ngIf="bill.currency !== 'UAH'" style="font-size: smaller; font-weight: bold"> {{ bill.currency }} </i>
+            </ng-template>
+
+          </div>
+          <div class="stat">
+            <div class="value">{{bill.value | number:'1.2'}}</div>
+          </div>
+          <progress class="progress stat-progress" value="100" max="100">
+            <div class="progress">
+              <span class="progress-bar" style="width: 100%;"></span>
+            </div>
+          </progress>
+        </div>
+        <div class="col-xs-12 stat-col" *ngFor="let c of currencies">
+          <div class="stat-icon">
+            <i class="fa fa-{{c.curIcon}}"></i>
+            <span *ngIf="c.curIcon === 'uah'">&#8372;</span>
+          </div>
+          <div class="stat">
+            <div class="value">{{ c.val | number:'1.2' }}</div>
+          </div>
+          <progress class="progress stat-progress" value="100" max="100">
+            <div class="progress">
+              <span class="progress-bar" style="width: 100%;"></span>
+            </div>
+          </progress>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

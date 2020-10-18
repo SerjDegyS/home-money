@@ -1,0 +1,39 @@
+<div class="col col-xs-12 col-sm-12 col-md-6 col-xl-7 history-col">
+  <div
+    @fade
+    class="alert alert-{{message.type}}"
+    *ngIf="message.text"
+  >
+    {{message.text}}
+  </div>
+  <div class="card">
+    <div class="card-block">
+      <div class="title-block">
+        <h4 class="title">Курс</h4>
+      </div>
+      <div class="row row-sm stats-container" *ngIf="currency">
+        <table class="table table-hover">
+          <thead>
+          <tr>
+            <th>Валюта</th>
+            <th>Курс</th>
+            <th>Дата</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>{{ bill.currency }}</td>
+            <td>1</td>
+            <td>{{currency.date | degysMoment: 'YYYY-MM-DD' : 'DD-MM-YYYY'}}</td>
+          </tr>
+          <tr *ngFor="let c of currencies">
+            <td>{{ c }}</td>
+            <td>{{ (1/currency.rates[c])|number:'1.2'}}</td>
+            <td>{{ currency.date | degysMoment: 'YYYY-MM-DD' : 'DD-MM-YYYY' }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

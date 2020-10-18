@@ -1,0 +1,98 @@
+<!--CONTENT-->
+<div class="title-block">
+  <h3 class="title pull-left">
+    Страница счета <span class="sparkline bar"></span>
+  </h3>
+</div>
+
+<div
+  @fade
+  class="alert alert-{{message.type}}"
+  *ngIf="message.text"
+>
+  {{message.text}}
+</div>
+
+<section @fade class="section">
+    <div class="card" style="width: 50%">
+      <div class="card-header bordered">
+        <div class="header-block">
+          <h3 class="title">Создать счет</h3>
+        </div>
+      </div>
+      <div class="card-block ">
+
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+          <div
+            [ngClass]="{'has-error': billValue.invalid && billValue.touched || billValue.value < 0}"
+            class="form-group"
+          >
+            <label class="control-label" for="bill-value">Начальная сума счета</label>
+            <input
+              type="number"
+              id="bill-value"
+              class="form-control"
+              [ngModel]="0"
+              name="billValue"
+              #billValue="ngModel"
+              required
+              min="0"
+            >
+            <span
+              *ngIf="billValue.invalid && billValue.touched"
+              class="form-help-text"
+            >
+          Поле не может быть пустым.
+        </span>
+            <span
+              *ngIf="billValue.value < 0"
+              class="form-help-text"
+            >
+          Счет не может быть меншим 0.
+        </span>
+          </div>
+
+          <div
+            class="form-group"
+            [ngClass]="{'has-error': !currency}"
+          >
+            <label class="control-label">Валюта</label>
+
+            <div class="form-inline m-r-2">
+              <input
+                type="text"
+                class="form-control"
+                style="vertical-align: inherit"
+                required
+                name="currency"
+                placeholder="Выберите валюту..."
+                [(ngModel)]="currency"
+                [disabled]="true"
+              >
+              <div class="form-group">
+              </div>
+              <div class="btn-group" degysDropdown>
+                <button type="button" class="btn btn-secondary dropdown-toggle ">
+                  Валюта...
+                </button>
+                <div class="dropdown-menu" style="overflow: scroll; height: 200px">
+                  <a class="dropdown-item" *ngFor="let c of allCurrency" (click)="setCurrency( c )">{{ c }}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <button
+            type="submit"
+            class="btn btn-primary"
+            [disabled]="f.form.invalid || billValue.value < 0 || !currency"
+          >Добавить
+          </button>
+        </form>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,25 @@
+.invisible {
+  display: none;
+}
+
+.history-chart-group{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.history-chart{
+  margin-bottom: 30px;
+}
+
+.history-chart-outcome{
+  color: red;
+}
+
+.history-chart-income{
+  color: green;
+}
+
+h4{
+  text-align: center;
+}

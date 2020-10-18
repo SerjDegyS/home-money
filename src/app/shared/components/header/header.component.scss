@@ -1,0 +1,22 @@
+.menu {
+  width: 50%;
+  text-align: center;
+  font-size: xx-large;
+}
+
+.header-top {
+  display: contents;
+}
+
+.header-down-menu {
+  width: 100%;
+}
+
+.header-down-menu-item {
+  font-size: 30px;
+  min-width: 50px;
+  margin: 15px;
+  >i {
+    min-width: 50px;
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "visitor@mail.ru",
+      "password": "12345678",
+      "name": "Гость",
+      "bill": 1
+    },
+    {
+      "email": "wfm1@mail.ru",
+      "password": "123456",
+      "name": "wfm1",
+      "id": 2,
+      "bill": 3
+    },
+    {
+      "email": "wfm2@mail.ru",
+      "password": "12345678",
+      "name": "kujk",
+      "id": 3
+    }
+  ],
+  "bills": [
+    {
+      "value": 99300,
+      "currency": "UAH",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "value": 5000,
+      "currency": "USD",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "value": 100000,
+      "currency": "UAH",
+      "userId": 1,
+      "id": 3
+    }
+  ],
+  "categories": [
+    {
+      "name": "Дом",
+      "capacity": 15000,
+      "billId": 1,
+      "id": 1
+    },
+    {
+      "name": "Еда",
+      "capacity": 10000,
+      "billId": 1,
+      "id": 2
+    },
+    {
+      "name": "Машина",
+      "capacity": 5000,
+      "billId": 1,
+      "id": 3
+    },
+    {
+      "name": "sxv",
+      "capacity": 11000,
+      "billId": 2,
+      "id": 5
+    },
+    {
+      "name": "nnnnnn",
+      "capacity": 100,
+      "billId": 1,
+      "id": 6
+    },
+    {
+      "name": "test",
+      "capacity": 1,
+      "billId": 1,
+      "id": 7
+    },
+    {
+      "name": "test2",
+      "capacity": 11,
+      "billId": 1,
+      "id": 8
+    },
+    {
+      "name": "test",
+      "capacity": 1,
+      "billId": 1,
+      "id": 9
+    },
+    {
+      "name": "test2",
+      "capacity": 1,
+      "billId": 1,
+      "id": 10
+    },
+    {
+      "name": "Настена",
+      "capacity": 1000,
+      "billId": 1,
+      "id": 11
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "type": "income",
+      "amount": 1250,
+      "categoryId": 2,
+      "date": "12.06.2019 19:49:02",
+      "description": "Подарили еду в гостях"
+    },
+    {
+      "id": 2,
+      "type": "outcome",
+      "amount": 1300,
+      "categoryId": 1,
+      "date": "13.06.2019 19:49:02",
+      "description": "Купил посудомоечную машину"
+    },
+    {
+      "type": "income",
+      "amount": 1480,
+      "categoryId": 2,
+      "date": "17.06.2019 14:00:48",
+      "id": 3,
+      "description": "Поход в окей с баллами. Бесплатная еда"
+    },
+    {
+      "type": "outcome",
+      "amount": 2470,
+      "categoryId": 2,
+      "date": "17.06.2019 14:00:58",
+      "id": 4,
+      "description": "Закупка на неделю"
+    },
+    {
+      "type": "outcome",
+      "amount": 4000,
+      "categoryId": 3,
+      "date": "10.06.2019 14:01:58",
+      "id": 5,
+      "description": "Заправка + проход ТО"
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "categoryId": 1,
+      "date": "28.01.2020 23:41:09",
+      "description": "ccc",
+      "id": 6
+    },
+    {
+      "type": "outcome",
+      "amount": 1000,
+      "categoryId": 1,
+      "date": "28.01.2020 23:41:38",
+      "description": "ccc",
+      "id": 7
+    },
+    {
+      "type": "income",
+      "amount": 1000,
+      "categoryId": 1,
+      "date": "28.01.2020 23:53:25",
+      "description": "ccc",
+      "id": 8
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "categoryId": 5,
+      "date": "29.01.2020 00:16:36",
+      "description": "ccc",
+      "id": 9
+    },
+    {
+      "type": "outcome",
+      "amount": 70,
+      "categoryId": 5,
+      "date": "29.01.2020 00:17:36",
+      "description": "ccc",
+      "id": 10
+    },
+    {
+      "type": "outcome",
+      "amount": 10000,
+      "categoryId": 5,
+      "date": "30.01.2020 22:11:56",
+      "description": "ccc",
+      "id": 11
+    },
+    {
+      "type": "income",
+      "amount": 1,
+      "categoryId": 1,
+      "date": "30.01.2020 23:24:06",
+      "description": "ccc",
+      "id": 12
+    },
+    {
+      "type": "outcome",
+      "amount": 1,
+      "categoryId": 6,
+      "date": "26.02.2020 00:11:30",
+      "description": "ccc",
+      "id": 13
+    },
+    {
+      "type": "income",
+      "amount": 1,
+      "categoryId": 6,
+      "date": "26.02.2020 00:14:22",
+      "description": "ccc",
+      "id": 14
+    },
+    {
+      "type": "outcome",
+      "amount": 700,
+      "categoryId": 11,
+      "date": "20.03.2020 00:04:47",
+      "description": "на гиалуроноваю кислоту",
+      "id": 15
+    }
+  ]
+}

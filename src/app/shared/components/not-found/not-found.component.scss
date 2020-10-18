@@ -1,0 +1,23 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  not-found-brand {
+    padding: 20px;
+  }
+
+  .not-found-welcome {
+    text-align: center;
+    color: #2fa0b9;
+    padding: 30px;
+  }
+
+  .not-found-text {
+    color: red;
+    padding: 30px;
+  }
+}

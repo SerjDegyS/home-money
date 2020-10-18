@@ -1,0 +1,46 @@
+<div @fade>
+  <div class="title-block">
+    <h3 class="title pull-left">
+      Страница истории <span class="sparkline bar"></span>
+    </h3>
+
+    <div class="pull-right">
+      <button class="btn-sm btn btn-primary-outline" (click)="openFilter()">
+        <i class="fa fa-filter"></i>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="text-center" *ngIf="!isLoaded">
+    <degys-loader></degys-loader>
+  </div>
+
+  <div *ngIf="isLoaded">
+    <div class="history-chart-group">
+      <div class="history-chart history-chart-income">
+        <h4>
+          Доход
+        </h4>
+        <degys-history-chart [data]="chartIncomeData"></degys-history-chart>
+      </div>
+      <div class="history-chart history-chart-outcome">
+        <h4>
+          Расход
+        </h4>
+        <degys-history-chart [data]="chartOutcomeData"></degys-history-chart>
+      </div>
+    </div>
+    <degys-history-events
+      [categories]="categories"
+      [events]="filteredEvents"
+    ></degys-history-events>
+    <div [ngClass]="{invisible: !isFilterVisible}">
+      <degys-history-filter
+        (onFilterApply)="onFilterApply($event)"
+        (onFilterCancel)="onFilterCancel()"
+        [categories]="categories"
+      ></degys-history-filter>
+    </div>
+  </div>
+</div>
