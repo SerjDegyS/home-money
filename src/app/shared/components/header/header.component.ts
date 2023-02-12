@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
   user: User;
 
   isOpenMenu = false;
+  closeMen = false;
 
   constructor(private authService: AuthService,
               private router: Router
@@ -31,5 +32,8 @@ export class HeaderComponent implements OnInit {
 
   openMenu() {
     this.isOpenMenu = !this.isOpenMenu;
+  }
+  closeMenu() {
+    this.closeMen = !this.closeMen;
   }
 }

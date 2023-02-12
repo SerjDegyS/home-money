@@ -5,7 +5,7 @@
       {{date | date: 'dd.MM.yyyy'}}
     </div>
 
-    <div class="menu" (click)="openMenu()">
+    <div class="menu" (click)="closeMenu()" >
       <li class="profile dropdown menu fa fa-align-justify">
             </li>
     </div>
@@ -14,14 +14,14 @@
       <ul class="nav-profile">
 
         <div
-          *ngIf="user else visitor">
+          *ngIf="user else visitor" (click)="openMenu()">
           <li class="profile dropdown" degysDropdown>
             <a class="nav-link dropdown-toggle" role="button">
                   <span class="name">
                     Здравствуйте, {{user.name}}
                   </span>
             </a>
-            <div class="dropdown-menu profile-dropdown-menu">
+            <div *ngIf="isOpenMenu" class="dropdown-menu profile-dropdown-menu">
               <a class="dropdown-item" [routerLink]="['/system/bill']"> <i class="fa fa-building-o"></i> Счет </a>
               <a class="dropdown-item" [routerLink]="['/system', 'history']"> <i class="fa fa-flash"></i> История </a>
               <a class="dropdown-item" [routerLink]="['/system', 'planning']"> <i class="fa fa-archive"></i> Планирование </a>
@@ -61,9 +61,9 @@
 
   </div>
 
-  <div *ngIf="isOpenMenu" class="header-down open">
+  <div *ngIf="closeMen" class="header-down open">
 
-  <div class="dropdown-menu header-down-menu">
+  <div class="dropdown-menu header-down-menu" (click)="closeMenu()">
       <a class="dropdown-item header-down-menu-item" [routerLink]="['/system/bill']"> <i class="fa fa-building-o"></i> Счет </a>
       <a class="dropdown-item header-down-menu-item" [routerLink]="['/system', 'history']"> <i class="fa fa-flash"></i> История </a>
       <a class="dropdown-item header-down-menu-item" [routerLink]="['/system', 'planning']"> <i class="fa fa-archive"></i> Планирование </a>

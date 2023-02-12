@@ -21,7 +21,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
 
   sub = new Subscription();
 
-  currentCategoryId = 1;
+  currentCategoryId: number;
   currentCategory: Category;
   billId: number = JSON.parse(window.localStorage.getItem('user')).bill;
   message: Message = new Message();
@@ -31,7 +31,11 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     // this.message = new Message('success', '');
-    this.onCategoryChange();
+    // this.onCategoryChange();
+    // this.onCategoryChange();
+    this.currentCategoryId = this.categories[0].id;
+    this.currentCategory = this.categories[0];
+    console.log(this.categories + 'nnnnn')
   }
 
   onSubmit(form: NgForm) {
@@ -56,6 +60,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
   onCategoryChange() {
     this.currentCategory = this.categories
       .find(c => c.id === +this.currentCategoryId);
+    console.log(this.currentCategory)
   }
 
   deleteGategory() {
@@ -66,6 +71,7 @@ export class EditCategoryComponent implements OnInit, OnDestroy {
       )
         .subscribe(catgory => {
           this.onCategoryDelete.emit(catgory);
+          this.currentCategory = this.categories[0];
           this.message.showMessage('danger', 'Каткгория и ее события успешно удалины.', 5000);
           console.log(catgory);
         }));

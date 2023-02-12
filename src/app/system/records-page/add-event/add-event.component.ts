@@ -46,6 +46,7 @@ export class AddEventComponent implements OnInit, OnDestroy {
         this.bill = bill;
         this.calculatedBill = bill.value;
       }));
+    console.log(this.categories + 'pppp')
   }
 
   onSubmit(form: NgForm) {

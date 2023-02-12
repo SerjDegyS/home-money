@@ -5,10 +5,10 @@ import {Directive, HostBinding, HostListener} from '@angular/core';
   selector: '[degysDropdown]'
 })
 export class DropdownDirective  {
-  @HostBinding('class.open') isOpen = false;
+  @HostBinding('class.open') isOpened = false;
 
 
   @HostListener('click', ['$event']) onClick(event) {
-    this.isOpen = !this.isOpen;
+    this.isOpened = !this.isOpened;
   }
 }

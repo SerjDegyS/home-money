@@ -3,12 +3,6 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import {AngularFireModule} from '@angular/fire/compat';
-import {AngularFirestoreModule} from '@angular/fire/compat/firestore';
-import {AngularFireAuthModule} from '@angular/fire/compat/auth';
-import {AngularFireDatabaseModule} from '@angular/fire/compat/database';
-
-import {UsersFirebaseService} from './shared/services/users.firebase.service';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {AuthModule} from './auth/auth.module';
@@ -32,12 +26,8 @@ import firebase from 'firebase/compat';
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    AngularFirestoreModule,
-    AngularFireDatabaseModule
   ],
-  providers: [UsersService, UsersFirebaseService, AuthService, AuthGuard],
+  providers: [UsersService, AuthService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
