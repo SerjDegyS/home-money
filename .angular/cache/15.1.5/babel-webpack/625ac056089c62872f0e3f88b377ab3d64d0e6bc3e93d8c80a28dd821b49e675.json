@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Category {\n  constructor(name, capacity, billId, id) {\n    this.name = name;\n    this.capacity = capacity;\n    this.billId = billId;\n    this.id = id;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

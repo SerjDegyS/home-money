@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class AuthService {\n  constructor() {\n    this.isAuthenticated = false;\n  }\n  login() {\n    this.isAuthenticated = true;\n  }\n  logout() {\n    this.isAuthenticated = false;\n    window.localStorage.clear();\n  }\n  isLogged() {\n    return this.isAuthenticated;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

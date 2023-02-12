@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Bill {\n  constructor(value, currency, userId, id) {\n    this.value = value;\n    this.currency = currency;\n    this.userId = userId;\n    this.id = id;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

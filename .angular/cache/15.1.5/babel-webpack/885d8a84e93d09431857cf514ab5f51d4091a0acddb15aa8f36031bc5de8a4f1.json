@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class ChooseEvent {\n  constructor(event, checked) {\n    this.event = event;\n    this.checked = checked;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

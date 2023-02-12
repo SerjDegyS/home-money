@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class Message {\n  constructor(type = '', text = '') {\n    this.type = type;\n    this.text = text;\n  }\n  showMessage(type, text, timer = 5000) {\n    this.text = text;\n    this.type = type;\n    setTimeout(() => this.text = '', timer);\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}
